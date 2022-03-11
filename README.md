@@ -3,7 +3,8 @@
 Add extension express 
 Use shortcut 
 
-app → Create express main class
+### app → 
+Create express main class
 routes → Create express route class
 sch → Create a mongoose schema
 mod → Create a sequelize model
