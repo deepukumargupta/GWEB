@@ -23,3 +23,6 @@ Install morgan for check request url
 
 Install Mongoose Database Library
 # npm install mongoose
+
+Install Cors for get data from frontend with backend
+# npm install cors
