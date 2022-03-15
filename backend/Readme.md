@@ -26,3 +26,6 @@ Install Mongoose Database Library
 
 Install Cors for get data from frontend with backend
 # npm install cors
+
+Install bcrypt for password Hash
+# npm install bcrypt
