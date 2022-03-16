@@ -29,3 +29,9 @@ Install Cors for get data from frontend with backend
 
 Install bcrypt for password Hash
 # npm install bcrypt
+
+Install Jwt token lib
+# npm i jsonwebtoken
+
+Install JWT express secure lib for middleware
+# npm i express-jwt
