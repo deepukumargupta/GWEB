@@ -1,0 +1,28 @@
+{
+  "root": "apps/grabtap-e2e",
+  "sourceRoot": "apps/grabtap-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/grabtap-e2e/cypress.json",
+        "devServerTarget": "grabtap:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "grabtap:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/grabtap-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["grabtap"]
+}

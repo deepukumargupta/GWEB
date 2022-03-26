@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "grabtap": "apps/grabtap",
+    "grabtap-e2e": "apps/grabtap-e2e"
+  }
+}
