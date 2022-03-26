@@ -1,17 +1,17 @@
 {
-    "root": "apps/grabtap-e2e",
-    "sourceRoot": "apps/grabtap-e2e/src",
+    "root": "apps/admin-e2e",
+    "sourceRoot": "apps/admin-e2e/src",
     "projectType": "application",
     "targets": {
         "e2e": {
             "executor": "@nrwl/cypress:cypress",
             "options": {
-                "cypressConfig": "apps/grabtap-e2e/cypress.json",
-                "devServerTarget": "grabtap:serve:development"
+                "cypressConfig": "apps/admin-e2e/cypress.json",
+                "devServerTarget": "admin:serve:development"
             },
             "configurations": {
                 "production": {
-                    "devServerTarget": "grabtap:serve:production"
+                    "devServerTarget": "admin:serve:production"
                 }
             }
         },
@@ -19,10 +19,10 @@
             "executor": "@nrwl/linter:eslint",
             "outputs": ["{options.outputFile}"],
             "options": {
-                "lintFilePatterns": ["apps/grabtap-e2e/**/*.{js,ts}"]
+                "lintFilePatterns": ["apps/admin-e2e/**/*.{js,ts}"]
             }
         }
     },
     "tags": [],
-    "implicitDependencies": ["grabtap"]
+    "implicitDependencies": ["admin"]
 }

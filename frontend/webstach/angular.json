@@ -1,7 +1,9 @@
 {
-  "version": 2,
-  "projects": {
-    "grabtap": "apps/grabtap",
-    "grabtap-e2e": "apps/grabtap-e2e"
-  }
+    "version": 2,
+    "projects": {
+        "admin": "apps/admin",
+        "admin-e2e": "apps/admin-e2e",
+        "grabtap": "apps/grabtap",
+        "grabtap-e2e": "apps/grabtap-e2e"
+    }
 }
