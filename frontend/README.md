@@ -17,3 +17,6 @@ nx serve admin
 nx serve admin --port 4100
 # Run User
 nx serve grabtap
+
+# Create components
+nx g component pages/product-list --project=grabtap
