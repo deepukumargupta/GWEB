@@ -11,7 +11,13 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 const routes: Routes = [
     {
         path: '',
-        component: ShellComponent
+        component: ShellComponent,
+        children: [
+            {
+                path: 'dashboard',
+                component: DashboardComponent
+            }
+        ]
     }
 ];
 
