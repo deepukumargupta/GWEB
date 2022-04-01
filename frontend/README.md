@@ -20,3 +20,5 @@ nx serve grabtap
 
 # Create components
 nx g component pages/product-list --project=grabtap
+
+npm install normalize.css
