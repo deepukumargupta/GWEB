@@ -15,9 +15,12 @@ import {ToolbarModule} from 'primeng/toolbar';
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 import { CategoriesService } from '@webstach/products';
+import { CategoriesFormComponent } from './categories/categories-form/categories-form.component';
+import {InputTextModule} from 'primeng/inputtext';
 
 const UX_Module = [
     CardModule,
+    InputTextModule,
     ToolbarModule,
     ButtonModule,
     TableModule,
@@ -34,6 +37,10 @@ const routes: Routes = [
             {
                 path: 'categories',
                 component: CategoriesListComponent
+            },
+            {
+                path: 'categories/form',
+                component: CategoriesFormComponent
             }
         ]
     }
@@ -41,7 +48,7 @@ const routes: Routes = [
 
 
 @NgModule({
-    declarations: [AppComponent, NxWelcomeComponent, DashboardComponent, ShellComponent, SidebarComponent, CategoriesListComponent],
+    declarations: [AppComponent, NxWelcomeComponent, DashboardComponent, ShellComponent, SidebarComponent, CategoriesListComponent, CategoriesFormComponent],
     imports: [
     BrowserModule,
     HttpClientModule, 
