@@ -35,3 +35,18 @@ Install Jwt token lib
 
 Install JWT express secure lib for middleware
 # npm i express-jwt
+
+post new user http://localhost:3000/api/v1/users/register
+
+{
+    "name": "Dkg",
+    "email": "guest@12345",
+    "password":"demoadmin",
+    "phone": "9162170045",
+    "isAdmin": true,
+    "street": "defssff",
+    "apartment": "demo address",
+    "zip": "022342",
+    "city": "Raxaul",
+    "country": "India"
+}

@@ -18,7 +18,8 @@
             "@webstach/orders": ["libs/orders/src/index.ts"],
             "@webstach/products": ["libs/products/src/index.ts"],
             "@webstach/ui": ["libs/ui/src/index.ts"],
-            "@webstach/users": ["libs/users/src/index.ts"]
+            "@webstach/users": ["libs/users/src/index.ts"],
+            "@env/*": ["environments/*"]
         }
     },
     "exclude": ["node_modules", "tmp"]
