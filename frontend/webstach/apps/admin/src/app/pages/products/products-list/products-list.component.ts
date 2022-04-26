@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '@webstach/products';
 
 @Component({
   selector: 'admin-products-list',
@@ -10,9 +11,20 @@ export class ProductsListComponent implements OnInit {
 
   products = [];
 
-  constructor() { }
+  constructor(
+    private productsService: ProductsService
+
+  ) { 
+  }
 
   ngOnInit(): void {
+    this._getProducts();
+  }
+  private _getProducts() {
+    this.productsService.getProducts().subscribe(products => {
+        this.products = products;
+      }
+    )
   }
 
 }
