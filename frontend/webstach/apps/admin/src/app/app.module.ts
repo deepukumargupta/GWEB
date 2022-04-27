@@ -4,12 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule , Routes} from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ShellComponent } from './shared/shell/shell.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { CategoriesListComponent } from './pages/categories/categories-list/categories-list.component';
+import { ProductsListComponent } from './pages/products/products-list/products-list.component';
+import { ProductsFormComponent } from './pages/products/products-form/products-form.component';
 
 import {CardModule} from 'primeng/card';
 import {ToolbarModule} from 'primeng/toolbar';
@@ -22,8 +23,13 @@ import {ToastModule} from 'primeng/toast'
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ColorPickerModule } from 'primeng/colorpicker';
-import { ProductsListComponent } from './pages/products/products-list/products-list.component';
-import { ProductsFormComponent } from './pages/products/products-form/products-form.component';
+import {InputNumberModule} from 'primeng/inputnumber';
+import { DropdownModule } from 'primeng/dropdown';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {InputSwitchModule} from 'primeng/inputswitch';
+import { EditorModule } from 'primeng/editor';
+// import { UsersListComponent } from './pages/users/users-list/users-list.component';
+// import { UsersFormComponent } from './pages/users/users-form/users-form.component';
 
 const UX_Module = [
     CardModule,
@@ -33,7 +39,14 @@ const UX_Module = [
     ToolbarModule,
     ButtonModule,
     ConfirmDialogModule,
-    ColorPickerModule
+    ColorPickerModule,
+    InputNumberModule,
+    InputSwitchModule,
+    InputTextareaModule,
+    DropdownModule,
+    InputTextareaModule,
+    InputSwitchModule,
+    EditorModule
 ]
 const routes: Routes = [
     {

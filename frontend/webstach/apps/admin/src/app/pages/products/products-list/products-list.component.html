@@ -17,7 +17,17 @@
     </div>
     <div class="p-grid">
       <div class="p-col-12">
-        <p-table [value]="products" styleClass="p-datatable-gridlines">
+        <p-table  #dt 
+        selectionMode="multiple" responsiveLayout="scroll"      
+        [paginator]="true"
+        [scrollable]="true" 
+        [rows]="10" 
+        scrollHeight="300px"
+        [virtualScroll]="true" 
+        [virtualRowHeight]="40"
+        [value]="products"
+        styleClass="p-datatable-gridlines"
+        [globalFilterFields]="['name']">
           <ng-template pTemplate="header">
             <tr>
               <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
