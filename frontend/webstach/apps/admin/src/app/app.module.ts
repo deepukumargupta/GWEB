@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule ,} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -11,6 +11,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { CategoriesListComponent } from './pages/categories/categories-list/categories-list.component';
 import { ProductsListComponent } from './pages/products/products-list/products-list.component';
 import { ProductsFormComponent } from './pages/products/products-form/products-form.component';
+import { UsersFormComponent } from './pages/users/users-form/users-form.component';
+import { UsersListComponent } from './pages/users/users-list/users-list.component';
 
 import {CardModule} from 'primeng/card';
 import {ToolbarModule} from 'primeng/toolbar';
@@ -28,83 +30,100 @@ import { DropdownModule } from 'primeng/dropdown';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputSwitchModule} from 'primeng/inputswitch';
 import { EditorModule } from 'primeng/editor';
-// import { UsersListComponent } from './pages/users/users-list/users-list.component';
-// import { UsersFormComponent } from './pages/users/users-form/users-form.component';
+import { TagModule } from 'primeng/tag';
+import { InputMaskModule } from 'primeng/inputmask';
 
-const UX_Module = [
-    CardModule,
-    ToastModule,
-    InputTextModule,
-    TableModule,
-    ToolbarModule,
-    ButtonModule,
-    ConfirmDialogModule,
-    ColorPickerModule,
-    InputNumberModule,
-    InputSwitchModule,
-    InputTextareaModule,
-    DropdownModule,
-    InputTextareaModule,
-    InputSwitchModule,
-    EditorModule
-]
-const routes: Routes = [
-    {
-        path: '',
-        component: ShellComponent,
-        children: [
-          {
-            path: 'dashboard',
-            component: DashboardComponent
-          },
-          {
-            path: 'categories',
-            component: CategoriesListComponent
-          },
-          {
-            path: 'categories/form',
-            component: CategoriesFormComponent
-          },
-          {
-            path: 'categories/form/:id',
-            component: CategoriesFormComponent
-          },
-          {
-            path: 'products',
-            component: ProductsListComponent
-          },
-          {
-            path: 'products/form',
-            component: ProductsFormComponent
-          },
-          {
-            path: 'products/form/:id',
-            component: ProductsFormComponent
-          }
-        ]
-    }
+
+const UX_MODULE = [
+  CardModule,
+  ToastModule,
+  InputTextModule,
+  TableModule,
+  ToolbarModule,
+  ButtonModule,
+  ConfirmDialogModule,
+  ColorPickerModule,
+  InputNumberModule,
+  DropdownModule,
+  InputTextareaModule,
+  InputSwitchModule,
+  EditorModule,
+  TagModule,
+  InputMaskModule
 ];
 
+const routes: Routes = [
+  {
+    path: '',
+    component: ShellComponent,
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: 'categories',
+        component: CategoriesListComponent
+      },
+      {
+        path: 'categories/form',
+        component: CategoriesFormComponent
+      },
+      {
+        path: 'categories/form/:id',
+        component: CategoriesFormComponent
+      },
+      {
+        path: 'products',
+        component: ProductsListComponent
+      },
+      {
+        path: 'products/form',
+        component: ProductsFormComponent
+      },
+      {
+        path: 'products/form/:id',
+        component: ProductsFormComponent
+      },
+      {
+        path: 'users',
+        component: UsersListComponent
+      },
+      {
+        path: 'users/form',
+        component: UsersFormComponent
+      },
+      {
+        path: 'users/form/:id',
+        component: UsersFormComponent
+      }
+    ]
+  }
+];
 
 @NgModule({
-    declarations: [
-    AppComponent, 
-    DashboardComponent, 
-    ShellComponent, 
-    SidebarComponent, 
-    CategoriesListComponent, 
-    CategoriesFormComponent, ProductsListComponent, ProductsFormComponent
-    ],
-    imports: [
+  declarations: [
+    AppComponent,
+    SidebarComponent,
+    ShellComponent,
+    DashboardComponent,
+    CategoriesListComponent,
+    CategoriesFormComponent,
+    ProductsListComponent,
+    ProductsFormComponent,
+    UsersListComponent,
+    UsersFormComponent
+  ],
+  imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule, 
+    ReactiveFormsModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
-    ...UX_Module
-    ],
-    providers: [CategoriesService, MessageService, ConfirmationService],
-    bootstrap: [AppComponent]
+    ...UX_MODULE
+  ],
+  providers: [CategoriesService, MessageService, ConfirmationService],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
