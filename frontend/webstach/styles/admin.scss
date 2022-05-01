@@ -16,10 +16,12 @@
 @import '~primeflex/primeflex.css';
 @import './base/configuration.scss';
 
-//Shared
-@import './apps/admin/shell.scss';
-
 //Libs
 @import './libs/ui/ui.scss';
 @import './libs/ui/banner.scss';
 @import './libs/ui/slider.scss';
+
+//Shared
+@import './apps/admin/shell.scss';
+
+@import './libs/users/users.scss';
